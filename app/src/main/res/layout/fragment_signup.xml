@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/customg_background"
+    tools:context=".fragment.Signup">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/customg_black"
+        android:text="Signup new user" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:textColorHint="@color/customg_grey"
+        android:hint="Enter E-mail"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:textSize="19sp"
+        android:textColor="@color/customg_black"
+        android:background="#fff"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:textColorHint="@color/customg_grey"
+        android:textColor="@color/customg_black"
+        android:hint="Enter E-mail"
+        android:inputType="textPassword"
+        android:background="#fff"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:textSize="19sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:layout_below="@+id/already"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_shape"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:text="Signup"
+        android:textSize="19sp"
+        android:id="@+id/login"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/customg_black"
+        android:id="@+id/signin"
+        android:layout_marginRight="25dp"
+        android:text="Login page"
+        android:layout_marginTop="15dp"
+        android:textSize="17sp"/>
+
+</LinearLayout>
