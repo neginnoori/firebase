@@ -20,7 +20,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.sql.Time;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.chrono.HijrahDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -41,12 +45,16 @@ public class AddNote extends AppCompatActivity {
         setContentView(R.layout.activity_add_note);
         save_note = findViewById(R.id.save);
 
+
+
         db = FirebaseFirestore.getInstance();
         calendar = Calendar.getInstance();
-        format = new SimpleDateFormat("dd,MMM");
+        format = new SimpleDateFormat("dd/MMM/yy - hh:mm");
+        String date = format.format(calendar.getTime());
 
         progress = findViewById(R.id.progress);
         title = findViewById(R.id.title);
+        title.setText(date);
         text = findViewById(R.id.text);
         progress.setVisibility(View.INVISIBLE);
         if(getIntent().hasExtra("note")){

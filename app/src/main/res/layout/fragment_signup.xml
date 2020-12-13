@@ -41,7 +41,7 @@
         android:id="@+id/password"
         android:textColorHint="@color/customg_grey"
         android:textColor="@color/customg_black"
-        android:hint="Enter E-mail"
+        android:hint="Password"
         android:inputType="textPassword"
         android:background="#fff"
         android:paddingHorizontal="10dp"
