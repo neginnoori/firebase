@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/customg_background"
+    tools:context=".AddNote">
+
+<EditText
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="10dp"
+    android:textSize="21sp"
+    android:textStyle="bold"
+    android:hint="Title"
+    app:backgroundTint="@android:color/transparent"
+    />
+    <app.my.firebase_project.LinedEditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/title"
+        android:layout_marginTop="15dp"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical"
+        android:padding="5dp"
+        android:id="@+id/text"
+        android:lineHeight="30dp"
+        android:text="sfdsfsdf"
+        android:gravity="top"
+        android:textSize="18sp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/progress"/>
+</RelativeLayout>

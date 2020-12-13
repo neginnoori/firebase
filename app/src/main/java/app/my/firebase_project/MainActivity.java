@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
-        //    Intent i = new Intent(this,Notelist_Activity.class);
-          //  startActivity(i);
-         //   finish();
+            Intent i = new Intent(this,MyNotes.class);
+            startActivity(i);
+            finish();
         }
     }
 }
