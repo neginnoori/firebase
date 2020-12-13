@@ -57,7 +57,7 @@ public class MyNotes extends AppCompatActivity {
         fireadapter = new FirestoreRecyclerAdapter<Note, NoteHolder>(response) {
             @Override
             public void onBindViewHolder(NoteHolder holder, int position, final Note model) {
-                // progressBar.setVisibility(View.GONE);
+
                 holder.textName.setText(model.getTitle());
                 holder.date.setText(model.getDate());
                 holder.desc.setText(model.getDescription());
@@ -82,8 +82,6 @@ public class MyNotes extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
 
-                                Toast.makeText(getApplicationContext(), "Note deleted !",
-                                        Toast.LENGTH_SHORT).show();
 
                             }
                         });
@@ -94,7 +92,7 @@ public class MyNotes extends AppCompatActivity {
             @Override
             public NoteHolder onCreateViewHolder(ViewGroup group, int i) {
                 View view = LayoutInflater.from(group.getContext())
-                        .inflate(R.layout.recycler_item, group, false);
+                        .inflate(R.layout.note, group, false);
 
                 return new NoteHolder(view);
             }
@@ -151,6 +149,9 @@ public class MyNotes extends AppCompatActivity {
             Intent i = new Intent(this,AddNote.class);
             startActivity(i);
 
+        }else {
+            FirebaseAuth.getInstance().signOut();
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

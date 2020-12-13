@@ -43,7 +43,7 @@ public class AddNote extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         calendar = Calendar.getInstance();
-        format = new SimpleDateFormat("dd,MM,YYYY");
+        format = new SimpleDateFormat("dd,MMM");
 
         progress = findViewById(R.id.progress);
         title = findViewById(R.id.title);
@@ -65,7 +65,7 @@ public class AddNote extends AppCompatActivity {
                 String title_text = title.getText().toString().trim();
                 String text_edit = text.getText().toString().trim();
                 if (title_text.matches("") || text_edit.matches("")) {
-                    Toast.makeText(getApplicationContext(), "Enter some characters", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "It's empty", Toast.LENGTH_SHORT).show();
                 } else {
                     if (getIntent().hasExtra("note")==false) {
                         progress.setVisibility(View.VISIBLE);
@@ -96,7 +96,8 @@ public class AddNote extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 progress.setVisibility(View.INVISIBLE);
-                Toast.makeText(getApplicationContext(), "Note Updated", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), " done", Toast.LENGTH_LONG).show();
+                finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

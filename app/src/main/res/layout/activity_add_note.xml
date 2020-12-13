@@ -30,7 +30,7 @@
         android:padding="5dp"
         android:id="@+id/text"
         android:lineHeight="30dp"
-        android:text="sfdsfsdf"
+        android:hint="Write note"
         android:gravity="top"
         android:textSize="18sp"
         />
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/save"
-        android:src="@drawable/ic_add"
+        android:src="@drawable/ic_baseline_save_24"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp"

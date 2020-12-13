@@ -124,7 +124,7 @@ public class Signup extends Fragment {
                 .createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                Toast.makeText(context, "Succesful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Welcome", Toast.LENGTH_SHORT).show();
                 progress.setVisibility(View.INVISIBLE);
 
                 Intent i = new Intent(context, MyNotes.class);
